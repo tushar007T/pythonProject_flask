@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Application Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+    input[type="text"],
+    input[type="email"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="file"] {
+        width: 100%;
+    }
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        margin-top: 20px; /* Add margin top for space */
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Job Application Form</h2>
+    <form action="#" method="post">
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="name" value="John" required>
+
+        <label for="surname">Last Name:</label>
+        <input type="text" id="surname" name="surname" value="Doe" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="john.doe@example.com" required>
+
+        <label for="employment">Employment Status:</label>
+        <select id="employment" name="employment" required>
+            <option value="">Select Employment Status</option>
+            <option value="employed">Employed</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="student" selected>Student</option> <!-- Pre-selecting "Student" -->
+            <option value="other">Other</option>
+        </select>
+
+        <div class="flex-container">
+            <div>
+                <label for="resume">Resume/CV:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" value="2024-02-09" required> <!-- Pre-filling with today's date -->
+            </div>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
